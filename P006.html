@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>CONECTA | Camila Rojas</title>
+<style>
+:root{--azul:#123454;--turquesa:#087f8c;--fondo:#f2f6fa}
+*{box-sizing:border-box}body{margin:0;background:var(--fondo);font-family:system-ui,Arial,sans-serif;color:#142c42;line-height:1.6}
+main{max-width:680px;margin:24px auto;padding:0 15px}header{background:var(--azul);color:white;padding:25px;border-radius:18px}
+h1{margin:4px 0;font-size:2rem}.marca{font-weight:800;letter-spacing:.12em;color:#91edf0}
+section{background:white;margin:15px 0;padding:20px;border-radius:16px;box-shadow:0 3px 12px #15304b12}
+h2{font-size:1.2rem;margin:0 0 8px}.contacto,.accion{display:block;padding:14px;margin:10px 0;border-radius:10px;background:var(--turquesa);color:white;font-weight:700;text-decoration:none;border:0;width:100%;font-size:1rem;text-align:center;cursor:pointer}
+.accion{background:#e5f2f5;color:#14354b;border:2px solid #8bc2ca;min-height:66px;font-size:1.08rem}.comunicar{border:3px solid #087f8c;background:#f6fdff}.respuesta{font-size:1.4rem;font-weight:800;min-height:2.3rem;color:#123454;padding:10px 0}.acciones{display:grid;grid-template-columns:1fr 1fr;gap:10px}.acciones .accion{margin:0}@media(max-width:430px){.acciones{grid-template-columns:1fr}}.nota{font-size:.88rem;color:#445b6a}.alerta{border-left:5px solid #d58917}
+</style></head><body><main><header><div class="marca">CONECTA · IDENTIFICACIÓN DE APOYO</div><h1>Camila Rojas</h1><div>Identificador: P006</div><div>Referencia: Antofagasta, sector norte</div></header>
+<section class="comunicar" aria-labelledby="titulo-comunicacion"><h2 id="titulo-comunicacion">💬 ¿Quieres comunicar algo?</h2><p class="nota">Si quieres, selecciona un mensaje. No tienes obligación de responder. Puedes usar tu propio teléfono o uno que te ofrezcan.</p>
+<div id="mensaje" class="respuesta" role="status" aria-live="polite"></div>
+<div class="acciones">
+<button type="button" class="accion" onclick="decir('No necesito ayuda, gracias')">✋ No necesito ayuda, gracias</button>
+<button type="button" class="accion" onclick="decir('Necesito espacio, por favor')">↔️ Necesito espacio, por favor</button>
+<button type="button" class="accion" onclick="decir('Necesito ayuda')">🤝 Necesito ayuda</button>
+<button type="button" class="accion" onclick="decir('Por favor llama a mi familia')">📞 Llama a mi familia</button>
+<button type="button" class="accion" onclick="decir('Necesito un lugar tranquilo')">🏡 Necesito tranquilidad</button>
+<button type="button" class="accion" onclick="decir('Por favor no me toques sin avisar')">🖐️ No me toques sin avisar</button>
+</div></section>
+<section><h2>💬 Cómo comunicarte conmigo</h2><p>Pregunta antes de acercarte.</p></section>
+<section><h2>🤝 Cómo ayudarme</h2><p>Evita el contacto físico innecesario.</p><p><strong>Necesidad de apoyo:</strong> Sensibilidad táctil</p></section>
+<section><h2>📱 Contactos de emergencia</h2><a class="contacto" href="tel:+56900000010">📞 Llamar a Madre: +56 9 0000 0010</a><a class="contacto" href="tel:+56900000011">📞 Llamar a Padre: +56 9 0000 0011</a></section>
+<section class="alerta"><h2>🚑 Si existe una urgencia</h2><p>Prioriza la seguridad y solicita asistencia profesional. En Chile, SAMU 131.</p><p class="nota">Esta ficha no reemplaza una evaluación médica ni acredita identidad. Datos ficticios de demostración.</p></section>
+<script>function decir(t){document.getElementById('mensaje').textContent=t;if('speechSynthesis' in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.lang='es-CL';speechSynthesis.speak(u)}}</script>
+</main></body></html>
